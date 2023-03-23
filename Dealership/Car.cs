@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 namespace Dealership
 {
-    public class Car
+    public class Client
     {
-        public string Marca { get; set; }
-        public string Model { get; set; }
-        public int An { get; set; }
-        public string Culoare { get; set; }
-        public string Numar { get; set; }
-        public double Pret { get; set; }
+    public string Nume { get; set; }
+    public string Prenume { get; set; }
+    public string Adresa { get; set; }
+    public string Telefon { get; set; }
+    public string Email { get; set; }
 
-        public Car(string marca, string model, int an, string culoare, string numar, double pret)
-        {
-            Marca = marca;
-            Model = model;
-            An = an;
-            Culoare = culoare;
-            Numar = numar;
-            Pret = pret;
-        }
-
-        public override string ToString()
-        {
-            return $"{An} {Marca} {Model}, {Culoare}, {Numar}, {Pret:C}/day";
-        }
+    public Client(string nume, string prenume, string adresa, string telefon, string email)
+    {
+        Nume = nume;
+        Prenume = prenume;
+        Adresa = adresa;
+        Telefon = telefon;
+        Email = email;
     }
+
+    public override string ToString()
+    {
+        return $"{Nume} {Prenume}, {Adresa}, {Telefon}, {Email}";
+    }
+}
 }
